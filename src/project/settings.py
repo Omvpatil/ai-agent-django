@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from decouple import config
 from pathlib import Path
 
+from httpx._transports import default
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,3 +121,4 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 GENAI_API_KEY = config("GENAI_API_KEY", default=None)
+MISTRAL_API_KEY = config("MISTRAL_API_KEY",default=None)
